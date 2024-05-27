@@ -34,7 +34,7 @@ def lookup(name:str)-> str:
  
     tools_for_agent = [
         Tool(
-            name="Search Google for linkedin profile page",
+            name="Crawl Google 4 linkedin profile page",
             func=get_profile_url_tavily,
             description="useful for when you need get the Linkedin Page URL",
         )
