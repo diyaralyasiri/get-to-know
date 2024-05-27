@@ -8,7 +8,7 @@ from output_parsers import summary_parser, Summary
 
 def ice_break_with(name: str)-> Tuple[Summary, str]:
     linkedin_url = linkedin_lookup_agent(name=name)
-    linkedin_data= scrape_linkedin_profile(linkedin_profile_url=linkedin_url, mock=True)
+    linkedin_data= scrape_linkedin_profile(linkedin_profile_url=linkedin_url)
     # linkedin_data = scrape_linkedin_profile(linkedin_profile_url="https://www.linkedin.com/in/diyar-alyasiri/", mock=True)
 
     summary_template= """
