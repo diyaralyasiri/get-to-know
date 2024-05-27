@@ -15,7 +15,7 @@ def scrape_linkedin_profile(linkedin_profile_url: str, mock: bool = False):
             linkedin_profile_url = "https://gist.githubusercontent.com/diyaralyasiri/cc29fdafa18e936b16e6c907d014610d/raw/c946e728758b779d4f33b79a3e3430a90474abe5/diyar.json"
             response = requests.get(
                 linkedin_profile_url,
-                timeout=10,
+                timeout=25,
             )
         else:
             api_endpoint = "https://nubela.co/proxycurl/api/v2/linkedin"
