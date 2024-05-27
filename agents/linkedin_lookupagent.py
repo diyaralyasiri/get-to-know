@@ -25,6 +25,7 @@ def lookup(name:str)-> str:
     llm= ChatOpenAI(temperature=0, model_name="gpt-4o")
     
     template = """given the full name {name_of_person} I want you to get me a link to their Linkedin profile page.
+                            the domain should be 'linkedin.com/in'
                             be careful not to provide me a link to a post, but rather to the profile itself.
                             Do not give me a directory link either.
                             Your answer should contain only a URL for linkedin"""
