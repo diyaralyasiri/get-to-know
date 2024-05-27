@@ -14,7 +14,7 @@ def ice_break_with(name: str)-> Tuple[Summary, str]:
     summary_template= """
     Given the Linkedin infomration {information} about a person I want you to create:
     1. A Short Summary
-    2. Two interesting facts about them
+    2. Three interesting facts about them
     \n{format_instructions}
     """
    
@@ -22,7 +22,7 @@ def ice_break_with(name: str)-> Tuple[Summary, str]:
     summary_prompt_template = PromptTemplate(input_variables=["information"], template=summary_template,
                                         partial_variables={"format_instructions": summary_parser.get_format_instructions()})
 
-    llm= ChatOpenAI(temperature=0, model_name="gpt-4o")
+    llm= ChatOpenAI(temperature=0.1, model_name="gpt-4o")
 
     # chain= LLMChain(llm=llm, prompt=summary_prompt_template)
 
